@@ -261,5 +261,10 @@ plugins=(
 
 #### 도커 설치
 
-brew cask install docker
+- `brew cask install `
 
+
+
+#### neofetch
+
+- `brew install neofetch`
