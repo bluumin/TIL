@@ -255,3 +255,11 @@ plugins=(
 
 디렉토리를 이동할 때 `z github`, `tab`과 같이 일부 검색어를 입력하고 tab을 눌러서 이동합니다.
 
+
+
+
+
+#### 도커 설치
+
+brew cask install docker
+
