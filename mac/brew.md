@@ -1,12 +1,30 @@
 # homebrew
 
-### 1. Homebrew Cask
+
+
+## Homebrew 설치하기
+
+아래 내용을 터미널에 붙여넣기. homebrew 자동 설치 됨.
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+
+
+## brew로 프로그램 설치하기
+
+
+
+### Java 설치
+
+1. Homebrew Cask
 
 Home-brew 최신 업데이트
 
 ```brew update && brew upgrade cask```
 
-### 2. Install Java Latest
+2. Install Java Latest
 
 brew로 Java 최신 버전 설치
 
@@ -24,7 +42,7 @@ brew로 Java 최신 버전 설치
 
 
 
-### 3. Install jenv
+3. Install jenv
 
 jenv: java 버전 관리 패키지
 
@@ -37,3 +55,9 @@ brew install jenv
 
 
 참고: https://jojoldu.tistory.com/329
+
+
+
+### openjdk8 설치
+
+참고 블로그: https://findstar.pe.kr/2019/01/20/install-openjdk-by-homebrew/
