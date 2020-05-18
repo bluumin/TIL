@@ -1,3 +1,21 @@
+# iTerm
+
+
+
+
+
+## brew 로 iTerm 설치
+
+```bash
+brew cask install iterm2
+```
+
+
+
+
+
+## iTerm 설치 후 zsh 등 터미널 설정
+
 zsh update & zsh-completions 설치
 
 brew install zsh zsh-completions
@@ -268,3 +286,34 @@ plugins=(
 #### neofetch
 
 - `brew install neofetch`
+
+
+
+
+
+
+
+### [oh-my-zsh] Insecure completion-dependent directories detected 에러 해결
+
+Mac이나 리눅스에서 대체로 이런 문제는 퍼미션 때문이다.
+
+ 
+
+이 경우 원인은 /usr/local/share/zsh 및 그 하위디렉토리의 소유자(user)가 원래 쓰던 계정으로 되어 있기 때문이다. 새로 만든 계정이 administer라 하더라도 그렇다.
+
+ 
+
+해결방법은 두 가지가 있는데, 하나는 디렉토리 소유권을 변경하는 것이고 다른 하나는 에러 메시지에 나온 것처럼 .zshrc에 ZSH_DISABLE_COMPFIX="true"를 입력하는 것이다.
+
+ 
+
+이런 경우 .zshrc에 설정을 추가하는 것이 바람직하다. 주의할 점은 oh-my-zsh보다 앞에 설정해야 한다는 것.
+
+
+
+![image-20200514170049081](/Users/bluuminn/Library/Application Support/typora-user-images/image-20200514170049081.png)
+
+
+
+껐다가 켜거나 source ~/.zshrc 하면 됨
+
