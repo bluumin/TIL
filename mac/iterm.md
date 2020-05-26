@@ -64,7 +64,14 @@ plugins=(
 
 oh-my-zsh의 기본 테마인 `robbyrussell`도 깔끔하지만, 이 외에 [다양한 테마](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)가 존재합니다. 테마를 바꾸는 방법은 `~/.zshrc`파일의 `ZSH_THEME="robbyrussell"` 부분을 원하는 테마로 수정하면 됩니다.
 
-여기서는 이쁘고 단순하고 빠른 [pure](https://github.com/sindresorhus/pure) prompt를 사용합니다.
+여기서는 이쁘고 단순하고 빠른 [pure](https://github.com/sindresorhus/pure) prompt를 사용합니다. => pure 사용 안함 avit 사용
+
+```bash
+vi ~/.zshrc
+ZSH_THEME="avit"
+# :wq 로 저장
+source ~/.zshrc
+```
 
 ```
 brew install nodejs # nodejs가 설치되어 있다면 skip
@@ -82,7 +89,7 @@ prompt pure
 
 
 
-
+## 여기부터 설정 시작 하면 됨 20.05.25
 
 **oh-my-zsh 팁**
 
@@ -151,13 +158,9 @@ __테마변경__
 
 vi ~/.SpaceVim.d/init.toml
 
-![image-20200514144720772](/Users/bluuminn/Library/Application Support/typora-user-images/image-20200514144720772.png)
+빨간 네모 친 곳 수정 및 추가
 
-
-
-같은 파일 맨 아래에 추가
-
-![image-20200514145305694](/Users/bluuminn/Library/Application Support/typora-user-images/image-20200514145305694.png)
+![img](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/676eb8b0-00ae-4735-893a-6f4677e6ecfe/_2020-05-25__11.16.59.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200525%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200525T142028Z&X-Amz-Expires=86400&X-Amz-Signature=5c55470eda06ad3070ece35c2869faefbdb345e0e692133af5890a7dae3181b8&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22_2020-05-25__11.16.59.png%22)
 
 
 
@@ -185,11 +188,12 @@ fzf는 강력하고 엄청나게 빠른 fuzzy finder 도구입니다. 증분 검
 
 **설치**
 
-```
-brew install fzf
+```bash
+$ brew install fzf
 
 # To install useful key bindings and fuzzy completion:
-$(brew --prefix)/opt/fzf/install
+# $(brew --prefix)/opt/fzf/install
+$ /usr/local/opt/fzf/install
 ```
 
 brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 전부 `y`를 누르면 됩니다. 설치가 완료되었으면 `source ~/.zshrc`를 입력하여 설정을 다시 불러옵니다.
