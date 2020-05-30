@@ -130,6 +130,21 @@ https://madplay.github.io/post/manage-java-version-using-jenv
 
 
 
-### openjdk8 설치
+### brew로 openjdk8 설치
+
+```zsh
+$ brew tap AdoptOpenJDK/openjdk
+
+# OpenJDK 8 설치
+$ brew cask install adoptopenjdk8
+```
+
+**버전 참고**
+
+- OpenJDK8 - `adoptopenjdk8`
+- OpenJDK9 - `adoptopenjdk9`
+- OpenJDK10 - `adoptopenjdk10`
+- OpenJDK11 - `adoptopenjdk11`
+- OpenJDK11 w/ OpenJ9 JVM - `adoptopenjdk11-openj9`
 
 참고 블로그: https://findstar.pe.kr/2019/01/20/install-openjdk-by-homebrew/
