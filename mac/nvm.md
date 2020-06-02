@@ -143,3 +143,11 @@ v6.10.1
 ## 그밖의 자세한 정보는
 
 [NVM](https://github.com/creationix/nvm) 에서 확인할 수 있습니다.
+
+
+
+
+
+## 참고하면 좋은 다른 블로그
+
+https://rimonmostafiz.com/post/install-and-manage-node-js-using-nvm/
