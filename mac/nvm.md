@@ -6,7 +6,7 @@
 
 ### 1. NVM 설치
 
-```
+```zsh
 $ sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 ```
 
@@ -14,7 +14,7 @@ $ sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install
 
 ### 2. 확인
 
-```
+```zsh
 $ nvm ls
 
 -zsh: nvm: command not found
@@ -24,13 +24,13 @@ $ nvm ls
 
 ### 3. 당황하지 않고
 
-```
+```zsh
 $ vi ~/.zshrc
 ```
 
 vi 에디터로 ./zshrc 열어서
 
-```
+```zsh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 ```
@@ -41,7 +41,7 @@ export NVM_DIR="$HOME/.nvm"
 
 ### 4. 재시작
 
-```
+```zsh
 source ~/.zshrc
 ```
 
@@ -49,7 +49,7 @@ source ~/.zshrc
 
 ### 5. 확인
 
-```
+```zsh
 $ nvm ls
 ->       system
 node -> stable (-> N/A) (default)
@@ -64,7 +64,7 @@ iojs -> N/A (default)
 
 ### 1. 설치
 
-```
+```zsh
 $ nvm install 6.10.1
 ```
 
@@ -74,7 +74,7 @@ $ nvm install 6.10.1
 
 ### 2. 확인
 
-```
+```zsh
 $ nvm ls
 ->      v6.10.1
          system
@@ -97,7 +97,7 @@ v6.10.1
 
 ### 1. 설치
 
-```
+```zsh
 $ nvm install 7.7.4
 ```
 
@@ -107,7 +107,7 @@ $ nvm install 7.7.4
 
 ### 2. 확인
 
-```
+```zsh
 $ nvm ls
         v6.10.1
 ->       v7.7.4
@@ -127,13 +127,13 @@ v7.7.4
 
 ### 3. node 버전 변경 및 확인
 
-```
+```zsh
 $ nvm use 6.10.1
 ```
 
 다시 6.10.1 버전으로 변경
 
-```
+```zsh
 $ node -v
 v6.10.1
 ```

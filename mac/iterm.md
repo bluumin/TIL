@@ -6,8 +6,8 @@
 
 ## brew 로 iTerm 설치
 
-```bash
-brew cask install iterm2
+```zsh
+$ brew cask install iterm2
 ```
 
 
@@ -24,8 +24,8 @@ brew install zsh zsh-completions
 
 oh-my-zsh 설치
 
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```zsh
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 
@@ -36,19 +36,19 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 oh-my-zsh의 가장 강력한 점은 플러그인입니다. [기본 플러그인](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins)외에 명령어 하이라이팅 플러그인 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)과 자동완성 플러그인 [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)을 설치합니다.
 
-```
+```zsh
 # zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # zsh-autosuggestions
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+$ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
 
 
 
 플러그인을 설치하면 반드시 `~/.zshrc`파일에 설정을 해야합니다. 파일을 열고 `plugins`항목에 플러그인을 추가합니다.
 
-```
+```zsh
 plugins=(
   git
   zsh-syntax-highlighting
@@ -66,30 +66,29 @@ oh-my-zsh의 기본 테마인 `robbyrussell`도 깔끔하지만, 이 외에 [다
 
 여기서는 이쁘고 단순하고 빠른 [pure](https://github.com/sindresorhus/pure) prompt를 사용합니다. => pure 사용 안함 avit 사용
 
-```bash
-vi ~/.zshrc
+```zsh
+$ vi ~/.zshrc
 ZSH_THEME="avit"
+
 # :wq 로 저장
-source ~/.zshrc
+$ source ~/.zshrc
 ```
 
-```
-brew install nodejs # nodejs가 설치되어 있다면 skip
-npm install --global pure-prompt
+```zsh
+$ brew install nodejs # nodejs가 설치되어 있다면 skip
+$ npm install --global pure-prompt
 ```
 
 설치를 완료했으면 `~/.zshrc`파일에 다음항목을 추가합니다.
 
-```
-autoload -U promptinit; promptinit
-prompt pure
+```zsh
+$ autoload -U promptinit; promptinit
+$ prompt pure
 ```
 
 이제 zsh 기본 설정이 끝났습니다!
 
 
-
-## 여기부터 설정 시작 하면 됨 20.05.25
 
 **oh-my-zsh 팁**
 
@@ -119,24 +118,26 @@ vim은 기본으로 설치된 터미널용 에디터로 GUI 환경의 에디터�
 
 내장된 vim대신 neovim을 설치합니다. neovim은 vim과 차이가 없어 보이는데 24bit True Color를 지원하고 오래된 vim 소스를 처음부터 다시 짜서 소스코드가 줄었다고 합니다. 저 같은 라이트 유저는 차이를 느끼진 못하지만 좋다고 해서 사용하고 있습니다. 그리고 테마에서 사용할 개발용 폰트를 설치합니다.
 
-```
-brew install neovim
-brew tap homebrew/cask-fonts
-brew cask install font-hack-nerd-font
+```zsh
+$ brew install neovim
+$ brew tap homebrew/cask-fonts
+$ brew cask install font-hack-nerd-font
 ```
 
 기본 설치가 완료되었으면 터미널 기본 에디터로 vi대신 neovim을 사용하도록 `~/.zshrc`에 다음 항목을 추가합니다.
 
-```
+```zsh
+$ vi ~/.zshrc
 alias vim="nvim"
 alias vi="nvim"
 alias vimdiff="nvim -d"
 export EDITOR=/usr/local/bin/nvim
 ```
 
-`source ~/.zshrc`를 입력하여 설정을 다시 불러옵니다.
-
-
+```zsh
+# 설정을 다시 불러옵니다.
+$ source ~/.zshrc
+```
 
 
 
@@ -144,8 +145,8 @@ export EDITOR=/usr/local/bin/nvim
 
 vim은 강력한 플러그인들이 많이 있는데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 화면을 보는 순간 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.
 
-```
-curl -sLf https://spacevim.org/install.sh | bash
+```zsh
+$ curl -sLf https://spacevim.org/install.sh | bash
 ```
 
 설치가 완료되면 `vi`를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (`1`을 누릅니다) 자동으로 플러그인을 설치합니다. 플러그인이 많아서 시간이 꽤 걸립니다.
@@ -218,7 +219,7 @@ brew install fzf
 
 설치가 완료되었으면 `~/.zshrc`에 plugin을 추가해줍니다.
 
-```
+```zsh
 plugins=(
   ...
   ...
@@ -250,13 +251,13 @@ fasd는 사용빈도가 높은 파일 또는 디렉토리 검색을 편하게 �
 
 **설치**
 
-```
-brew install fasd
+```zsh
+$ brew install fasd
 ```
 
 설치가 완료되었으면 `~/.zshrc`에 plugin을 추가해줍니다.
 
-```
+```zsh
 plugins=(
   ...
   ...
