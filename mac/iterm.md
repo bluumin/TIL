@@ -322,3 +322,86 @@ Mac이나 리눅스에서 대체로 이런 문제는 퍼미션 때문이다.
 
 껐다가 켜거나 source ~/.zshrc 하면 됨
 
+# SCM Breeze
+
+>  Git 내용에 번호를 부여하여 편리하게 사용하도록 도와주는 도구
+
+## 설치
+
+```zsh
+$ git clone git://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
+$ ~/.scm_breeze/install.sh
+$ source ~/.bashrc   # or source ~/.zshrc
+```
+
+
+
+## 사용법
+
+### git status
+
+```zsh
+$ gs
+# On branch: feature/PRJ2019-1181  |  [*] => $e*
+#
+➤ Changes not staged for commit
+#
+#       modified: [1] src/main/java/dcode/domain/entity/ProductStock.java 
+#       modified: [2] src/main/java/dcode/service/impl/ProductServiceImpl.java 
+#
+➤ Untracked files
+#
+#      untracked: [3] src/main/java/dcode/service/SizeType.java 
+#
+```
+
+### git diff
+
+```zsh
+$ gd 1
+
+diff --git a/src/main/java/dcode/domain/entity/ProductStock.java b/src/main/java/dcode/domain/entity/ProductStock.java
+index ceb2e65..2b2579a 100644
+--- a/src/main/java/dcode/domain/entity/ProductStock.java
++++ b/src/main/java/dcode/domain/entity/ProductStock.java
+@@ -36,6 +36,9 @@ public class ProductStock implements Serializable, Cloneable {
+     @Transient
+     private int count = 1;
+ 
++    @Transient
++    private double sizeCode;
++
+     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "productStock")
+     @JoinColumn(name = "product_stock_id")
+     private ProductSoldStock productSoldStock;
+(END)
+```
+
+### git add
+
+```zsh
+$ ga 3
+# Added '/Users/bluuminn/workspace/n.code/d.code-api-products/src/main/java/dcode/service/SizeType.java'
+#
+# On branch: feature/PRJ2019-1181  |  [*] => $e*
+#
+➤ Changes to be committed
+#
+#       new file: [1] src/main/java/dcode/service/SizeType.java 
+#
+➤ Changes not staged for commit
+#
+#       modified: [2] src/main/java/dcode/domain/entity/ProductStock.java 
+#       modified: [3] src/main/java/dcode/service/impl/ProductServiceImpl.java 
+#
+```
+
+### git commit
+
+```zsh
+$ gc 1 -m "SizeType Enum 생성"
+[feature/PRJ2019-1181 34e729c] SizeType Enum 생성
+ 1 file changed, 46 insertions(+)
+ create mode 100644 src/main/java/dcode/service/SizeType.java
+```
+
