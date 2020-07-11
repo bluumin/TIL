@@ -12,15 +12,15 @@
    - Windows
   - set SPRING_PROFILES_ACTIVE=test
        gradlew.bat cleanTest test
-   
+
 3. Run Configurations 설정
-   ![image-20200518185253230](../images/Profiles/image-20200518185253230.png)
+   ![image-20200518185253230](./Profiles/image-20200518185253230.png)
 
    > Environment variables에 SPRING_PROFILES_ACTIVE='어떤 설정 사용할 것인지 적어줌'
 
    <br/>
 
-   ![image-20200518185442346](../images/Profiles/image-20200518185442346.png)
+   ![image-20200518185442346](./Profiles/image-20200518185442346.png)
    
    > application.yml 에 spring.profiles로 만들어둔 설정 값을 적어주면 됨.
    >

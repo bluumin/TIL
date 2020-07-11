@@ -32,13 +32,13 @@ $ open /usr/local/bin/jmeter
 
 
 
-![image-20200604170702651](../images/jmeter/image-20200604170702651.png)
+![image-20200604170702651](./jmeter/image-20200604170702651.png)
 
 실행하면 위와 같은 터미널이 뜬 뒤,
 
 
 
-![image-20200604170721715](../images/jmeter/image-20200604170721715.png)
+![image-20200604170721715](./jmeter/image-20200604170721715.png)
 
 위와 같은 프로그램이 실행된다.
 

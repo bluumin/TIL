@@ -104,7 +104,7 @@ Process finished with exit code 1
 
 ### 해결
 
-![image-20200604212714462](../images/Error-Wiki/image-20200604212714462.png)
+![image-20200604212714462](./Error-Wiki/image-20200604212714462.png)
 
 Edit Configurations 창 열어서 Environment Variables 부분에 SPRING_PROFILES_ACTIVE 설정을 해줬더니 잘 됐다~~ 끝.
 
@@ -264,7 +264,7 @@ Process finished with exit code 0
 - 대충 에러 내용은 `Could not resolve placeholder 'cloud.aws.credentials.accessKey' in value "${cloud.aws.credentials.accessKey}"` 이런 것.. 이것도 알고보니 환경 변수 설정을 안해줬다.
 - 마찬가지로 해준다.. 환경 변수 설정은 application.yml 에 spring.profiles 로 명시 돼있는 것들 중에 적어주면 된다.
 
-![image-20200605165957560](../images/Error-Wiki/image-20200605165957560.png)
+![image-20200605165957560](./Error-Wiki/image-20200605165957560.png)
 
 ### tomcat 서버 포트 변경하기
 
@@ -274,11 +274,11 @@ Process finished with exit code 0
 
 1. Edit Configurations 창을 열고, Environment variables 오른쪽 끝의 버튼 클릭
 
-![image-20200605170413998](../images/Error-Wiki/image-20200605170413998.png)
+![image-20200605170413998](./Error-Wiki/image-20200605170413998.png)
 
 2. 아래 [+] 버튼 클릭 후, Name에 `server.port` Value에 원하는 포트번호를 적어주면 된다.
 
-![image-20200605170817487](../images/Error-Wiki/image-20200605170817487.png)
+![image-20200605170817487](./Error-Wiki/image-20200605170817487.png)
 
 
 
