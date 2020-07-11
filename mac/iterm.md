@@ -18,7 +18,11 @@ $ brew cask install iterm2
 
 zsh update & zsh-completions 설치
 
-brew install zsh zsh-completions
+```zsh
+$ brew install zsh zsh-completions
+```
+
+
 
 
 
@@ -161,9 +165,7 @@ vi ~/.SpaceVim.d/init.toml
 
 빨간 네모 친 곳 수정 및 추가
 
-![img](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/676eb8b0-00ae-4735-893a-6f4677e6ecfe/_2020-05-25__11.16.59.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200525%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200525T142028Z&X-Amz-Expires=86400&X-Amz-Signature=5c55470eda06ad3070ece35c2869faefbdb345e0e692133af5890a7dae3181b8&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22_2020-05-25__11.16.59.png%22)
-
-
+![img](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/676eb8b0-00ae-4735-893a-6f4677e6ecfe/_2020-05-25__11.16.59.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200711%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200711T171341Z&X-Amz-Expires=86400&X-Amz-Signature=e404e7b9b127bd4fece8069e7e861a14d35a8be16688f451b60643e607a38fb5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22_2020-05-25__11.16.59.png%22)
 
 **폰트**
 
@@ -203,7 +205,7 @@ brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 
 
 brew install fzf
 
-![image-20200514145916399](/Users/bluuminn/Library/Application Support/typora-user-images/image-20200514145916399.png)
+![image-20200712014412484](iterm/image-20200712014412484.png)
 
 
 
@@ -211,7 +213,7 @@ brew install fzf
 
 중간에 To install useful keybindings and fuzzy completion: 아래 경로 복사해서 명령어로 실행 (아래 사진 참고)
 
-![image-20200514150039151](/Users/bluuminn/Library/Application Support/typora-user-images/image-20200514150039151.png)
+![image-20200712014429103](iterm/image-20200712014429103.png)
 
 
 
@@ -314,11 +316,7 @@ Mac이나 리눅스에서 대체로 이런 문제는 퍼미션 때문이다.
 
 이런 경우 .zshrc에 설정을 추가하는 것이 바람직하다. 주의할 점은 oh-my-zsh보다 앞에 설정해야 한다는 것.
 
-
-
-![image-20200514170049081](/Users/bluuminn/Library/Application Support/typora-user-images/image-20200514170049081.png)
-
-
+![image-20200712012429246](iterm/image-20200712012429246.png)
 
 껐다가 켜거나 source ~/.zshrc 하면 됨
 
